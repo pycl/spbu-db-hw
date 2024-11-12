@@ -43,7 +43,7 @@ INSERT INTO groups(id,full_name,short_name,students_ids) VALUES
 INSERT INTO Students(id,first_name,last_name,group_id,courses_ids) VALUES
 ('st1', 'Иван', 'Иванов', '1', ARRAY['1','2']),  
 ('st2', 'Пётр', 'Петров', '1', ARRAY['1','3']),  
-('st3', 'Владимир', 'Жуков', '1', ARRAY['1','4']),
+('st3', 'Владимир', 'Жуков', '1', ARRAY['2','4']),
 ('st4', 'Александр', 'Смирнов', '2', ARRAY['2','3']),
 ('st5', 'Николай', 'Белоусов', '3', ARRAY['2','4']), 
 ('st6', 'Даяна', 'Кириллова', '3', ARRAY['3','4']);
