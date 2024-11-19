@@ -72,7 +72,8 @@ JOIN
 JOIN
     Courses c ON sc.course_id = c.id
 ORDER BY
-    s.id, c.id;
+    s.id, c.id
+LIMIT 3;
 
 -- Найти студентов, у которых средняя оценка по курсам выше, чем у любого другого студента в их группе.
 -- Поскольку ранее мы создали только таблицу по математике, 
@@ -101,6 +102,7 @@ group_max_grades AS (
 )
 -- Найти каждого студента в каждой группе с наивысшей средней оценкой
 SELECT
+    sag.group_id,
     sag.student_id,
     s.first_name,
     s.last_name,
@@ -124,7 +126,8 @@ FROM
 LEFT JOIN
     student_courses sc ON c.id = sc.course_id
 GROUP BY
-    c.id, c.name;
+    c.id, c.name
+LIMIT 3;
 
 -- Найти среднюю оценку на каждом курсе.
 --Поскольку в данный момент в базе данных имеется только таблица по математике, 
@@ -139,4 +142,5 @@ FROM
 WHERE 
     c.name = 'Math'
 GROUP BY
-    c.id, c.name;
+    c.id, c.name
+LIMIT 3;
